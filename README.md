@@ -1,12 +1,24 @@
 ## Benjamim is José's younger brother
-#### JWT library for token creation and verification
-
-> **RFC7519**  - Internet Engineering Task Force (IETF)
+>#### JWT library for token creation and verification
 >
-> **UPDATED**  -  May 2015
+> **RFC7519** Internet Engineering Task Force (IETF) **UPDATED** May 2015
+> **SOURCE** https://tools.ietf.org/html/rfc7519
 >
-> **URL** - https://tools.ietf.org/html/rfc7519
-
+> **Abstract** -  JSON Web Token (JWT) is a compact, URL-safe means of representing
+   claims to be transferred between two parties.  The claims in a JWT
+   are encoded as a JSON object that is used as the payload of a JSON
+   Web Signature (JWS) structure or as the plaintext of a JSON Web
+   Encryption (JWE) structure, enabling the claims to be digitally
+   signed or integrity protected with a Message Authentication Code
+   (MAC) and/or encrypted.
+>
+> **Resumo** - JSON Web Token (JWT) é um meio compacto e seguro de URL de representar
+   reivindicações a serem transferidas entre duas partes. As reivindicações em um JWT
+   são codificados como um objeto JSON que é usado como a carga útil de um JSON
+   Estrutura de assinatura da Web (JWS) ou como o texto simples de um JSON Web
+   Estrutura de criptografia (JWE), permitindo que as declarações sejam digitalmente
+   assinado ou integridade protegida com um código de autenticação de mensagem
+   (MAC) e/ou criptografado.
 
 #### Generate a new Token
 ##### Support Types 
