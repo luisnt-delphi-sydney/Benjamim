@@ -3,9 +3,9 @@ unit Benjamim.Interfaces;
 interface
 
 uses
-  Benjamim.JWT.Header.Interfaces,
-  Benjamim.JWT.Payload.Interfaces,
-  Benjamim.JWT.Signature.Interfaces
+  Benjamim.Header.Interfaces,
+  Benjamim.Payload.Interfaces,
+  Benjamim.Signature.Interfaces
     ;
 
 Type

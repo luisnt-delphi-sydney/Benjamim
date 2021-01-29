@@ -3,17 +3,18 @@ unit Benjamim;
 interface
 
 uses
-  System.Classes, System.JSON, System.StrUtils, System.SysUtils
-    , Benjamim.JWT.Utils
-    , Benjamim.JWT.Header.Interfaces
-    , Benjamim.JWT.Payload.Interfaces
-    , Benjamim.JWT.Signature.Interfaces
+  System.Classes, System.StrUtils
+    , Benjamim.Utils
+    , Benjamim.Header.Interfaces
+    , Benjamim.Payload.Interfaces
+    , Benjamim.Signature.Interfaces
     , Benjamim.Interfaces
     ;
 
 type
-  TJwtAlgorithm = Benjamim.JWT.Utils.TJwtAlgorithm;
+  TJwtAlgorithm = Benjamim.Utils.TJwtAlgorithm;
 
+type
   TJWT = class(TInterfacedObject, iJWT)
     class function New(const aSingleton: boolean = true): iJWT;
     constructor Create;
@@ -46,9 +47,10 @@ function JWT(const aSingleton: boolean = true): iJWT;
 implementation
 
 uses
-  Benjamim.JWT.Header
-    , Benjamim.JWT.Payload
-    , Benjamim.JWT.Signature
+  System.SysUtils
+    , Benjamim.Header
+    , Benjamim.Payload
+    , Benjamim.Signature
     ;
 
 function JWT(const aSingleton: boolean = true): iJWT;

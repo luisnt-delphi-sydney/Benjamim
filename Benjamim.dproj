@@ -83,10 +83,10 @@
         <SanitizedProjectName>Benjamim</SanitizedProjectName>
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <DCC_Description>JWT library for token creation and verification</DCC_Description>
-        <DCC_UnitSearchPath>sample\modules\.dcp;sample\modules\.dcu;sample\modules;$(DCC_UnitSearchPath);modules\.dcp;modules\.dcu;modules</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>sample\modules\.dcp;sample\modules\.dcu;sample\modules;modules\.dcp;modules\.dcu;modules;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Linux64)'!=''">
-        <Debugger_Launcher>/usr/bin/xterm -e "%debuggee%"</Debugger_Launcher>
+        <Debugger_Launcher>/usr/bin/xterm -e &quot;%debuggee%&quot;</Debugger_Launcher>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;SpecialBuild=;PrivateBuild=;CFBundleVersion=1.0.3</VerInfo_Keys>
         <DCC_UnitSearchPath>.\samples;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
@@ -152,6 +152,9 @@
         <VerInfo_Private>true</VerInfo_Private>
         <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
         <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Release>2</VerInfo_Release>
+        <VerInfo_Build>7</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.2.7;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;SpecialBuild=;PrivateBuild=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -162,13 +165,13 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="src\Benjamim.JWT.Utils.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Header.Interfaces.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Header.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Payload.Interfaces.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Payload.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Signature.Interfaces.pas"/>
-        <DCCReference Include="src\Benjamim.JWT.Signature.pas"/>
+        <DCCReference Include="src\Benjamim.Utils.pas"/>
+        <DCCReference Include="src\Benjamim.Header.Interfaces.pas"/>
+        <DCCReference Include="src\Benjamim.Header.pas"/>
+        <DCCReference Include="src\Benjamim.Payload.Interfaces.pas"/>
+        <DCCReference Include="src\Benjamim.Payload.pas"/>
+        <DCCReference Include="src\Benjamim.Signature.Interfaces.pas"/>
+        <DCCReference Include="src\Benjamim.Signature.pas"/>
         <DCCReference Include="src\Benjamim.Interfaces.pas"/>
         <DCCReference Include="src\Benjamim.pas"/>
         <BuildConfiguration Include="Release">

@@ -1,12 +1,12 @@
-unit Benjamim.JWT.Header;
+unit Benjamim.Header;
 
 interface
 
 uses
   System.JSON, System.Classes, System.SysUtils
 
-    , Benjamim.JWT.Utils
-    , Benjamim.JWT.Header.Interfaces
+    , Benjamim.Utils
+    , Benjamim.Header.Interfaces
 
     ;
 
@@ -17,13 +17,11 @@ type
     destructor Destroy; override;
   strict private
     FHeader: TJwtAlgorithm;
-  private
-
   public
-    function Algorithm(const aAlgorithm: TJwtAlgorithm): iHeader;
+    function Algorithm: string; overload;
+    function Algorithm(const aAlgorithm: TJwtAlgorithm): iHeader; overload;
     function AsJson(const AsBase64: boolean = false): string;
     function AsJsonObject: TJSONObject;
-    function AsAlgorithm: TSHA2Version;
   end;
 
 implementation
@@ -63,9 +61,9 @@ begin
   Result := AsJson(false).ClearLineBreak.AsJsonObject;
 end;
 
-function THeader.AsAlgorithm: TSHA2Version;
+function THeader.Algorithm: string;
 begin
-  Result := FHeader.AsAlgorithm;
+   Result := FHeader.AsString;
 end;
 
 end.

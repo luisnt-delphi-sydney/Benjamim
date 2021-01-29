@@ -33,13 +33,13 @@ requires
   rtl;
 
 contains
-  Benjamim.JWT.Utils in 'src\Benjamim.JWT.Utils.pas',
-  Benjamim.JWT.Header.Interfaces in 'src\Benjamim.JWT.Header.Interfaces.pas',
-  Benjamim.JWT.Header in 'src\Benjamim.JWT.Header.pas',
-  Benjamim.JWT.Payload.Interfaces in 'src\Benjamim.JWT.Payload.Interfaces.pas',
-  Benjamim.JWT.Payload in 'src\Benjamim.JWT.Payload.pas',
-  Benjamim.JWT.Signature.Interfaces in 'src\Benjamim.JWT.Signature.Interfaces.pas',
-  Benjamim.JWT.Signature in 'src\Benjamim.JWT.Signature.pas',
+  Benjamim.Utils in 'src\Benjamim.Utils.pas',
+  Benjamim.Header.Interfaces in 'src\Benjamim.Header.Interfaces.pas',
+  Benjamim.Header in 'src\Benjamim.Header.pas',
+  Benjamim.Payload.Interfaces in 'src\Benjamim.Payload.Interfaces.pas',
+  Benjamim.Payload in 'src\Benjamim.Payload.pas',
+  Benjamim.Signature.Interfaces in 'src\Benjamim.Signature.Interfaces.pas',
+  Benjamim.Signature in 'src\Benjamim.Signature.pas',
   Benjamim.Interfaces in 'src\Benjamim.Interfaces.pas',
   Benjamim in 'src\Benjamim.pas';
 

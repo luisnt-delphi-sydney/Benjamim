@@ -1,4 +1,4 @@
-unit Benjamim.JWT.Signature.Interfaces;
+unit Benjamim.Signature.Interfaces;
 
 interface
 

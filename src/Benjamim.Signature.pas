@@ -1,11 +1,11 @@
-unit Benjamim.JWT.Signature;
+unit Benjamim.Signature;
 
 interface
 
 uses
   System.Classes, System.TypInfo, System.NetEncoding, System.Hash, System.SysUtils
-    , Benjamim.JWT.Utils
-    , Benjamim.JWT.Signature.Interfaces
+    , Benjamim.Utils
+    , Benjamim.Signature.Interfaces
     , Benjamim.Interfaces
 
     ;
@@ -53,13 +53,13 @@ begin
     Exit((TNetEncoding.Base64.EncodeBytesToString(THashSHA2.GetHMACAsBytes(
       TEncoding.UTF8.GetBytes(aData),
       TNetEncoding.Base64.DecodeStringToBytes(FJWT.Password),
-      FJWT.Header.AsAlgorithm
+      FJWT.Header.Algorithm.AsJwtAlgorithm.AsAlgorithm
       ))).ClearLineBreak.FixBase64);
 
   Result := (TNetEncoding.Base64.EncodeBytesToString(THashSHA2.GetHMACAsBytes(
     TEncoding.UTF8.GetBytes(aData),
     FJWT.Password,
-    FJWT.Header.AsAlgorithm)
+    FJWT.Header.Algorithm.AsJwtAlgorithm.AsAlgorithm)
     )).ClearLineBreak.FixBase64;
 end;
 

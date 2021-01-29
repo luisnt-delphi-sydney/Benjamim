@@ -1,4 +1,4 @@
-unit Benjamim.JWT.Payload.Interfaces;
+unit Benjamim.Payload.Interfaces;
 
 interface
 

@@ -1,4 +1,4 @@
-﻿unit Benjamim.JWT.Utils;
+﻿unit Benjamim.Utils;
 
 interface
 
@@ -37,7 +37,7 @@ type
     function FixBase64: string;
     function AsBase64url: String;
     function AsString: String;
-    function StartsWith(const Value: string): Boolean;
+//    function StartsWith(const Value: string): Boolean;
   end;
 
   TVariantHelper = record Helper for Variant
@@ -132,17 +132,10 @@ begin
   Result := System.NetEncoding.TBase64Encoding.Base64.Decode(Self);
 end;
 
-function TStringHelper.StartsWith(const Value: string): Boolean;
-begin
-  if Value = EmptyStr then
-    Exit(True);
-  Result := StartsText(Value, Self);
-end;
-
 { TVariantHelper }
 function TVariantHelper.AsString: String;
 begin
-   Result := System.Variants.VarToStrDef(Self, EmptyStr);
+  Result := System.Variants.VarToStrDef(Self, EmptyStr);
 end;
 
 end.
