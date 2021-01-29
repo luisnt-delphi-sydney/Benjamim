@@ -6,8 +6,8 @@ program BenjamimTest;
 
 
 uses
-  System.SysUtils,
-  Benjamim;
+  System.SysUtils
+    , Benjamim;
 
 var
   LToken: string;
@@ -20,8 +20,7 @@ begin
 
     Benjamim.JWT.Header.Algorithm(TJwtAlgorithm.HS256); { OPTIONAL - DEFAULT TJwtAlgorithm.HS256 }
 
-    Benjamim.JWT.Payload
-      .jti(1)
+    Benjamim.JWT.Payload.jti(1)
       .iss('Luis Nt')
       .sub('Chave de acesso')
       .aud('192.168.0.77')
@@ -32,13 +31,13 @@ begin
       .add('name', 'your fullname')
       .add('phone', 559822223333)
       ;
-    LToken := Bemjamim.JWT.Signature.Sign;
+    LToken := Benjamim.JWT.Signature.Sign;
 
     WriteLn(LToken);
 
   except
     on E: Exception do
-      writeln(E.ClassName, ': ', E.Message);
+      WriteLn(E.ClassName, ': ', E.Message);
   end;
 
 end.

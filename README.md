@@ -46,7 +46,7 @@
 
 ##### Sample use
 ```delphi
-    uses Bemjamim;
+    uses Benjamim;
     { 
        Set the password using the JWT.Password ('secret') method; is optional. 
        Loads the JWT_PRIVATE_PASSWORD environment by default and if it does not exist
@@ -58,11 +58,11 @@
        usará a constante DEFAULT_PASSWORD='secret' contida na 
        unit Core.JWT.Utils.pas 
     }
-    Bemjamim.JWT.Password('secret'); { OPTIONAL }
+    Benjamim.JWT.Password('secret'); { OPTIONAL }
 
-    Bemjamim.JWT.Header.Algorithm(TJwtAlgorithm.HS256); { OPTIONAL - DEFAULT TJwtAlgorithm.HS256 } 
+    Benjamim.JWT.Header.Algorithm(TJwtAlgorithm.HS256); { OPTIONAL - DEFAULT TJwtAlgorithm.HS256 } 
     
-    Bemjamim.JWT.Payload
+    Benjamim.JWT.Payload
                 .jti(1)                           
                 .iss('Luis Nt')                   
                 .sub('Chave de acesso')           
@@ -74,15 +74,15 @@
                 .add('name', 'your fullname') 
                 .add('phone', 559822223333) 
     ;
-    LToken := Bemjamim.JWT.Signature.Sign; 
+    LToken := Benjamim.JWT.Signature.Sign; 
 ```
 
 #### Verify a Token
 ##### Sample use
 ```delphi
-    uses Bemjamim;
+    uses Benjamim;
 
-    Bemjamim.JWT.Password('secret'); { OPCIONAL }
+    Benjamim.JWT.Password('secret'); { OPCIONAL }
       
-    Bemjamim.JWT.Token(aValue).Signature.Verify; { true / false }
+    Benjamim.JWT.Token(aValue).Signature.Verify; { true / false }
 ```
