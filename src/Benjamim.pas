@@ -4,6 +4,7 @@ interface
 
 uses
   System.Classes, System.JSON, System.StrUtils, System.SysUtils
+    , Benjamim.JWT.Utils
     , Benjamim.JWT.Header.Interfaces
     , Benjamim.JWT.Payload.Interfaces
     , Benjamim.JWT.Signature.Interfaces
@@ -11,6 +12,8 @@ uses
     ;
 
 type
+  TJwtAlgorithm = Benjamim.JWT.Utils.TJwtAlgorithm;
+
   TJWT = class(TInterfacedObject, iJWT)
     class function New(const aSingleton: boolean = true): iJWT;
     constructor Create;
@@ -43,8 +46,7 @@ function JWT(const aSingleton: boolean = true): iJWT;
 implementation
 
 uses
-  Benjamim.JWT.Utils
-    , Benjamim.JWT.Header
+  Benjamim.JWT.Header
     , Benjamim.JWT.Payload
     , Benjamim.JWT.Signature
     ;

@@ -7,7 +7,9 @@ program BenjamimTest;
 
 uses
   System.SysUtils
-    , Benjamim;
+    , Benjamim
+
+    ;
 
 var
   LToken: string;
