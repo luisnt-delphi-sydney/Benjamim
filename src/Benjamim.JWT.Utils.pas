@@ -1,5 +1,5 @@
 ﻿unit Benjamim.JWT.Utils;
-
+
 interface
 
 uses
@@ -40,7 +40,7 @@ type
     function StartsWith(const Value: string): Boolean;
   end;
 
-  VariantHelper = record Helper for Variant
+  TVariantHelper = record Helper for Variant
     function AsString: String;
   end;
 
@@ -139,19 +139,11 @@ begin
   Result := StartsText(Value, Self);
 end;
 
-{ VariantHelper }
-
-efunction VariantHelper { VariantHelper }
-
-  .function VariantHelper.AsString: String;
+{ TVariantHelper }
+function TVariantHelper.AsString: String;
 begin
-
+   Result := System.Variants.VarToStrDef(Self, EmptyStr);
 end;
 
-AsString:
-String;
-begin
-
-end;
-
-nd.
+end.
+

@@ -1,4 +1,4 @@
-unit Benjamim.JWT;
+unit Benjamim;
 
 interface
 
@@ -7,7 +7,7 @@ uses
     , Benjamim.JWT.Header.Interfaces
     , Benjamim.JWT.Payload.Interfaces
     , Benjamim.JWT.Signature.Interfaces
-    , Benjamim.JWT.Interfaces
+    , Benjamim.Interfaces
     ;
 
 type

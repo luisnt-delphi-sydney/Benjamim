@@ -40,7 +40,7 @@ contains
   Benjamim.JWT.Payload in 'src\Benjamim.JWT.Payload.pas',
   Benjamim.JWT.Signature.Interfaces in 'src\Benjamim.JWT.Signature.Interfaces.pas',
   Benjamim.JWT.Signature in 'src\Benjamim.JWT.Signature.pas',
-  Benjamim.JWT.Interfaces in 'src\Benjamim.JWT.Interfaces.pas',
-  Benjamim.JWT in 'src\Benjamim.JWT.pas';
+  Benjamim.Interfaces in 'src\Benjamim.Interfaces.pas',
+  Benjamim in 'src\Benjamim.pas';
 
 end.

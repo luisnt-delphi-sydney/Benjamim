@@ -5,8 +5,8 @@ interface
 uses
   System.Classes, System.TypInfo, System.NetEncoding, System.Hash, System.SysUtils
     , Benjamim.JWT.Utils
-    , Benjamim.JWT.Interfaces
     , Benjamim.JWT.Signature.Interfaces
+    , Benjamim.Interfaces
 
     ;
 
